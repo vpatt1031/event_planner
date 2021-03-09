@@ -1,0 +1,13 @@
+<ul>
+	{{name}}
+	{{#if eaten}}
+	<button class="change-burger" data-id="{{id}}" data-newburger="{{eaten}}">
+		Mark Me Complete <span data-id={{id}} class="material-icons">dining</span>
+	</button>
+	{{else}}
+	<button class="change-delete" data-id="{{this.id}}">
+		Delete Event <span data-id={{this.id}} class="material-icons">delete</span>
+	</button>
+	{{/if}}
+	{{!-- <button class="delete-cat" data-id="{{this.id}}">DELETE!</button> --}}
+</ul>
