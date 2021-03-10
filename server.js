@@ -1,23 +1,23 @@
-const express = require('express');
+const express = require("express");
+const db = require("./models")
 
-// Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
-// Requiring our models for syncing
-const db = require('./models');
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.use(express.static("public"))
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+require("./routes/apiRoutes")(app)
+require("./routes/htmlRoutes")(app)
 
-// Static directory
-app.use(express.static('public'));
+db.sequelize.sync({force: true}).then(() => {
+    app.listen(PORT, function(){
+        console.log("Server working")
+    })
+})
 
-// Routes
-require('./routes/api-routes.js')(app);
+module.exports = app
 
-// Syncing our sequelize models and then starting our Express app
-db.sequelize.sync().then(() => {
-  app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
-});
+
+
