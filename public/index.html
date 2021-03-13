@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col s2 m4">
         <!-- button triggers modal to open with form to create new event -->
-        <button data-target="modal1" class="btn modal-trigger" id="createNewBtn">Plan a new event</button>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Plan a new event</a>
       </div>
       <div class="col s2 m4">
         <a class="waves-effect waves-light btn">Sort by Category</a>
@@ -48,9 +48,9 @@
       </div>
     </div>
 
-
-          
-    <div id="modal1" class="modal">
+  <!-- Modal for create a new event -->
+   <section class="styleModal">
+     <div id="modal1" class="modal">
       <div class="modal-content">
         <h4>Plan an event!</h4>
 
@@ -127,11 +127,13 @@
         </div>
       </div>
     </div>
+  </section>
+
+  </div>
        
 
     <!-- <input id="test" placeholder= "donuts">
     <button id=submit>submit</button> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- <script src="assets/js/frontend.js"></script> -->
     <script src="../test_files/materialize.js"></script>
