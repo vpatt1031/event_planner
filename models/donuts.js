@@ -1,4 +1,4 @@
-export default function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Donut = sequelize.define("Donut", {
       name: {
           type: DataTypes.STRING,
