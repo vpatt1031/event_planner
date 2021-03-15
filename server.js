@@ -9,8 +9,10 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(express.static("public"))
 
+// eslint-disable-next-line no-undef
 require("./routes/apiRoutes")(app)
 require("./routes/htmlRoutes")(app)
+
 
 db.sequelize.sync({force: true}).then(() => {
     app.listen(PORT, function(){
