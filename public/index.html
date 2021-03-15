@@ -72,17 +72,17 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Placeholder" id="title" type="text" class="validate">
+              <input placeholder="Placeholder" id="title" type="text" class="validate formInput">
               <label for="title">Title:</label>
             </div>
             <div class="input-field col s6">
-              <input id="date" type="text" class="validate">
+              <input id="date" type="text" class="validate formInput">
               <label for="date">Date:</label>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <select>
+                <select class="formInput" id="category">
                   <option value="" disabled selected>Choose a category</option>
                   <option value="Social">Social</option>
                   <option value="Fundraiser">Fundraiser</option>
@@ -91,27 +91,29 @@
                 </select>
               </div>
               <div class="input-field col s6">
-              <input id="description" type="text" class="validate">
+              <input id="description" type="text" class="validate formInput">
               <label for="description">Description:</label>
             </div>
           </div>
           <div class="row">
-            <select>
+            <select class="formInput" id="team_leader">
               <option value="" disabled selected>Assign a team leader</option>
-              <option value="Molly Shannon">Molly Shannon</option>
-              <option value="Kevin Hart">Kevin Hart</option>
-              <option value="Gigi Goode">Gigi Goode</option>
-              <option value="Kameron Michaels">Kameron Michaels</option>
+              <option value="Jane Smith">Jane Smith</option>
+              <option value="Mark Brown">Mark Brown</option>
+              <option value="Diane McCall">Diane McCall</option>
+              <option value="Michele Webber">Michele Webber</option>
+              <option value="Keith Gray">Keith Gray</option>
             </select>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <select multiple>
+              <select multiple class="formInput" id="vendors">
                 <option value="" disabled selected>Add vendors</option>
-                <option value="Florist">Florist</option>
-                <option value="Caterer">Caterer</option>
-                <option value="DJ">DJ</option>
-                <option value="Stylist">Stylist</option>
+                <option value="Carlo's Crazy Cotton Candy">Carlo's Crazy Cotton Candy</option>
+                <option value="Perfect Image Photo Booth">Perfect Image Photo Booth</option>
+                <option value="Frankie's Pizza">Frankie's Pizza</option>
+                <option value="Obstacle Course 4u">Obstacle Course 4u</option>
+                <option value="Neds Game Truck">Neds Game Truck</option>
               </select>
             </div>
           </div>
@@ -119,20 +121,14 @@
             <div class="input-field col s12">
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
-                  <span>Good to go</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in formInput" id="needs_attention" checked="checked" />
                   <span>Needs attention</span>
                 </label>
               </p>
             </div>
           </div>
           <!-- submit button should be a post to the database and event dynamically appends to page -->
-          <button type="submit" id="submitFormBtn" class="btn btn-warning">Submit</button>
+          <button id="submitFormBtn" class="btn btn-warning modal-close">Submit</button>
 
         </form>
 

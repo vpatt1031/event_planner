@@ -20,18 +20,20 @@ VALUES ("Jane Smith", "janesmith@pta.com", 555-555-1234),
 USE events_db;
 
 CREATE TABLE scheduled_events (
-name VARCHAR(100) NOT NULL,
+title VARCHAR(100) NOT NULL,
 category VARCHAR(50),
 date INTEGER(12),
 description VARCHAR(240),
-vendors VARCHAR(500)
+vendors VARCHAR(500),
+team_leader VARCHAR(50),
+needs_attention BOOLEAN NULL
 );
 
 SELECT * FROM events_db.scheduled_events;
 INSERT INTO scheduled_events (name, category, date, description, vendors)
 VALUES ("Car Wash Fundraiser", "Fundraiser", 03302021, "Final fundraiser for 8th grade formal", "N/A"),
 ("8th Grade Formal", "Social", 04242021, "Semi-Formal Dance for 8th Graders", "Carlo's Crazy Cotton Candy, Perfect Image Photo Booth, Frankie's Pizza"),
-("Field Day", "extracurricular", 05152021, "Outdoor field day for all students", "Carlo's Crazy Cotton Candy, Frankie's Pizza, Obstacle Course 4u, Neds Game Truck");
+("Field Day", "Extracurricular", 05152021, "Outdoor field day for all students", "Carlo's Crazy Cotton Candy, Frankie's Pizza, Obstacle Course 4u, Neds Game Truck");
 
 
 USE events_db;
