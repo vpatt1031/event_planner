@@ -28,7 +28,6 @@ addEventButton.addEventListener('click', (e) => {
     .then((response) => { console.log(response) /*response.json()*/})
     .then((data) => {
       console.log('Success in adding event:', data);
-      alert(`Adding event: ${newEvent.title}!`)
       location.reload();
     })
     
