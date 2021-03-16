@@ -1,6 +1,6 @@
 //adding an event to the table events_db
 
-const addEventButton = document.getElementById('add-btn');
+const addEventButton = document.getElementById('submitFormBtn');
 addEventButton.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -8,8 +8,10 @@ addEventButton.addEventListener('click', (e) => {
   const newEvent = {
     title: document.getElementById('title').value.trim(),
     // eventType: document.getElementById('eventType').value.trim(),
-    eventDate: document.getElementById('eventDate').value.trim(),
-    eventDescription: document.getElementById('eventDescription').value.trim(),
+    category: document.getElementById('category').value.trim(),
+    date: document.getElementById('date').value.trim(),
+    description: document.getElementById('description').value.trim(),
+    vendors: document.getElementById('vendors').value.trim(),
     // vendors: document.getElementById('vendors').value.trim(),
     // teamLeader: document.getElementById('teamLeader').value.trim(),
     // teamLeaderEmail: document.getElementById('teamLeaderEmail').value.trim(),
@@ -35,8 +37,11 @@ addEventButton.addEventListener('click', (e) => {
 
   // Dump the content of the input boxes
   document.getElementById('title').value = '';
-  document.getElementById('eventType').value = '';
-  document.getElementById('eventDate').value = '';
+  document.getElementById('category').value = '';
+  document.getElementById('date').value = '';
+  document.getElementById('description').value = '';
+  document.getElementById('vendors').value = '';
+
   // document.getElementById('eventDescription').value = '';
   // document.getElementById('vendors').value = '';
   // document.getElementById('teamLeader').value = '';

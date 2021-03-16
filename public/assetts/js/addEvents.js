@@ -9,10 +9,12 @@ fetch('/api/new', {
     .then((response) => response.json())
     .then((data) => {
       console.log('Success in grabbing event:', data);
-      data.forEach(({ title, eventDate, eventDescription }, i) => {
+      data.forEach(({ title, category, date, description, vendors }, i) => {
           console.log(title);
-          console.log(eventDate);
-          console.log(eventDescription);
+          console.log(category);
+          console.log(date);
+          console.log(description);
+          console.log(vendors);
           console.log(i);
         // Parent div for other elements
         // const sectionBreak = document.createElement('hr');
@@ -28,18 +30,26 @@ fetch('/api/new', {
   
         // Add all events
         const nameEl = document.createElement('card-container')
-        nameEl.textContent = `Name: ${title}`;
+        nameEl.textContent = `Title: ${title}`;
+
+        const eventCategoryEl = document.createElement('card-container')
+        eventCategoryEl.textContent = `Event Category: ${category}`;
   
         const eventDateEl = document.createElement('card-container')
-        eventDateEl.textContent = `Event Date: ${eventDate}`;
+        eventDateEl.textContent = `Event Date: ${date}`;
   
         const eventDescriptionEl = document.createElement('card-container')
-        eventDescriptionEl.textContent = `eventDescription: ${eventDescription}`;
+        eventDescriptionEl.textContent = `Description: ${description}`;
+
+        const eventVendorsEl = document.createElement('card-container')
+        eventVendorsEl.textContent = `Description: ${vendors}`;
 
   
         wellSection.appendChild(nameEl);
+        wellSection.appendChild(eventCategoryEl);
         wellSection.appendChild(eventDateEl);
         wellSection.appendChild(eventDescriptionEl);
+        wellSection.appendChild(eventVendorsEl);
         // wellSection.appendChild(sectionBreak);
       });
     });

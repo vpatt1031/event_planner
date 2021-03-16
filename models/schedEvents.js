@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = function(sequelize, DataTypes) {
-    var ScheduledEvents = sequelize.define("Scheduled Events", {
-        name: {
+    var Events = sequelize.define("Events", {
+        title: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,
             allowNull: false
@@ -9,24 +9,24 @@ module.exports = function(sequelize, DataTypes) {
         category: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,
-            allowNull: true
+            allowNull: false
         },
         date: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,
-            allowNull: true
+            allowNull: false
         }, 
         description: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,
-            allowNull: true
+            allowNull: false
         },
         vendors: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,
-            allowNull: true
+            allowNull: false
         }
     })
   
-    return ScheduledEvents
+    return Events
   }

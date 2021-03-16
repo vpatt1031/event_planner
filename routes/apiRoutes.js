@@ -22,8 +22,10 @@ module.exports = function(app) {
 
     db.Events.create({
       title: addEvent.title,
-      eventDescription: addEvent.eventDescription,
-      eventDate: addEvent.eventDate,
+      category: addEvent.category,
+      date: addEvent.date,
+      description: addEvent.description,
+      vendors: addEvent.vendors,
     });
     res.status(200).json(addEvent);
   })
