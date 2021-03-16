@@ -25,6 +25,7 @@ module.exports = function(app) {
       category: addEvent.category,
       date: addEvent.date,
       description: addEvent.description,
+      team_leader: addEvent.team_leader,
       vendors: addEvent.vendors,
     });
     res.status(200).json(addEvent);

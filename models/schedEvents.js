@@ -21,6 +21,11 @@ module.exports = function(sequelize, DataTypes) {
             description: DataTypes.TEXT,
             allowNull: false
         },
+        team_leader: {
+            type: DataTypes.STRING,
+            description: DataTypes.TEXT,
+            allowNull: false
+        },
         vendors: {
             type: DataTypes.STRING,
             description: DataTypes.TEXT,

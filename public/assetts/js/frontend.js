@@ -7,14 +7,12 @@ addEventButton.addEventListener('click', (e) => {
   // All data comes from the input fields
   const newEvent = {
     title: document.getElementById('title').value.trim(),
-    // eventType: document.getElementById('eventType').value.trim(),
     category: document.getElementById('category').value.trim(),
     date: document.getElementById('date').value.trim(),
     description: document.getElementById('description').value.trim(),
+    team_leader: document.getElementById('team_leader').value.trim(),
     vendors: document.getElementById('vendors').value.trim(),
-    // vendors: document.getElementById('vendors').value.trim(),
-    // teamLeader: document.getElementById('teamLeader').value.trim(),
-    // teamLeaderEmail: document.getElementById('teamLeaderEmail').value.trim(),
+    
 
   };
   console.log(newEvent)
@@ -40,18 +38,10 @@ addEventButton.addEventListener('click', (e) => {
   document.getElementById('category').value = '';
   document.getElementById('date').value = '';
   document.getElementById('description').value = '';
+  document.getElementById('team_leader').value = '';
   document.getElementById('vendors').value = '';
 
-  // document.getElementById('eventDescription').value = '';
-  // document.getElementById('vendors').value = '';
-  // document.getElementById('teamLeader').value = '';
-  // document.getElementById('teamLeaderEmail').value= '';
+  
 });
 
-// fetch('/api/new' , {
-//   method: 'GET',
-//   headers: {
-//     'Content-Type': 'application/json',
-//   }
-// }).then(response => response.json())
-//   .then(data => console.log(data))
+
