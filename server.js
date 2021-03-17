@@ -14,7 +14,7 @@ require("./routes/apiRoutes")(app)
 require("./routes/htmlRoutes")(app)
 
 
-db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync().then(() => {
     app.listen(PORT, function(){
         console.log("Server working")
     })
