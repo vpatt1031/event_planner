@@ -45,8 +45,17 @@ $(document).ready(function($) {
     }
 
     initializeForm()
-        
- 
+
+    const allDayEvents = document.querySelectorAll('.fc-daygrid-day-events')
+    console.log(allDayEvents)
+    
+    const allCalenderDays = document.querySelectorAll('.fc-daygrid-day')
+    // // allCalenderDays.filter(calenderDay => {
+    // //     return calenderDay.getAttribute('data-date') === '2021-03-10'
+    // });
+
+    // console.log(allCalenderDays[0])
+    console.log(allCalenderDays)
 
 });
 
