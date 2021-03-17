@@ -1,24 +1,19 @@
 /* eslint-disable no-undef */
-//setting up 
-const db = require("../models"); 
+//setting up
+const db = require("../models");
 
-
-module.exports = function(app) {
-  
-  app.get('/api/new', (req, res) => {
-    console.log("active")
+module.exports = function (app) {
+  app.get("/api/new", (req, res) => {
+    console.log("active");
     db.Events.findAll({})
-    .then(data => {
-      res.json(data)
-    })
-    .catch(err => res.json('error', {error: err}))
-  })
-      
-  
-  app.post ('/api/new' , (req, res) => {
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json("error", { error: err }));
+  });
 
+  app.post("/api/new", (req, res) => {
     const addEvent = req.body;
-
 
     db.Events.create({
       title: addEvent.title,
@@ -29,5 +24,17 @@ module.exports = function(app) {
       vendors: addEvent.vendors,
     });
     res.status(200).json(addEvent);
-  })
+  });
+
+  app.delete("/api/new/:id", (req, res) => {
+    // We just have to specify which event we want to destroy with "where"
+    db.Events.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then((dbEvents) => res.json(dbEvents));
+  });
+
+
+
 };

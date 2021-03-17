@@ -31,10 +31,12 @@ fetch("/api/new", {
             </ul>
           </div>
           <div class="card-action">
-            <a class="blue-text text-darken-4" href="/edit">Edit</a>
-            <a class="blue-text text-darken-4" href="/cancel">Cancel</a>
+            <a class="blue-text text-darken-4" id="edit" href="/edit">Edit</a>
+            <a class="blue-text text-darken-4" id="cancel" href="/cancel">Cancel</a>
           </div>
         </div>`);
         
     });
   });
+
+

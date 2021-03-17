@@ -40,6 +40,37 @@ addEventButton.addEventListener('click', (e) => {
   document.getElementById('team_leader').value = '';
   document.getElementById('vendors').value = '';
 
+// Function added to cancel button to delete event
+
+const deleteEvent = (e) => {
+  e.stopPropagation();
+
+  console.log(e.target)
+
+  const { id } = e.target.dataset;
+
+  fetch(`/api/new/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+};
+const event = {
+  text: document.getElementById('newEvent').value.trim(),
+};
+// Delete button
+const delBtn = document.createElement('button');
+delBtn.classList.add('delete', 'btn', 'btn-danger');
+delBtn.setAttribute('data-id', event.id);
+delBtn.innerText = 'x';
+delBtn.addEventListener('click', deleteEvent);
+
+
+
+
+
+
   
 });
 
