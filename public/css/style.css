@@ -1,3 +1,8 @@
+
+
 .card-style {
-    border-radius: 3rem;
+    border-radius: 3rem !important; 
+    color: rgb(144, 163, 144) !important;
 }
+
+
