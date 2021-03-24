@@ -14,7 +14,7 @@ This full-stack application utilizes the MVC paradigm and a server-side API.  Ev
 - Events would be color-coded by category
 - Events could be flagged 'need attention' if vendors/team leaders needed to be assigned for the event to take place.
 - User login/authentification for staff
-![screenshot](/public/img/eventplannerSS.png)
+![screenshot](public/img/eventplannerSS.png)
 
 
 ## Usage <a name="usage"></a>
