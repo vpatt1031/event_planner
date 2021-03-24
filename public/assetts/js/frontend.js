@@ -42,32 +42,39 @@ addEventButton.addEventListener('click', (e) => {
 
 // Function added to cancel button to delete event
 
-const deleteEvent = (e) => {
-  e.stopPropagation();
+// const deleteEvent = (e) => {
+//   e.stopPropagation();
 
-  console.log(e.target)
+//   console.log(e.target)
 
-  const { id } = e.target.dataset;
+//   const { id } = e.target.dataset;
 
-  fetch(`/api/new/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-};
-const event = {
-  text: document.getElementById('newEvent').value.trim(),
-};
-// Delete button
-const delBtn = document.createElement('button');
-delBtn.classList.add('delete', 'btn', 'btn-danger');
-delBtn.setAttribute('data-id', event.id);
-delBtn.innerText = 'x';
-delBtn.addEventListener('click', deleteEvent);
+//   fetch(`/api/new/${id}`, {
+//     method: 'DELETE',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   })
+// };
+// const event = {
+//   text: document.getElementById('newEvent').value.trim(),
+// };
+// // Delete button
+// const delBtn = document.createElement('button');
+// delBtn.classList.add('delete', 'btn', 'btn-danger');
+// delBtn.setAttribute('data-id', event.id);
+// delBtn.innerText = 'x';
+// delBtn.addEventListener('click', deleteEvent);
+// document.getElementById("cancel"),addEventListener("click", deleteEvent)
 
+// const button = document.getElementById("cancel");
+   
+//   // confirm we have selected the button on the dom
+//   console.log(button);
 
-
+//   const clickEvent = (e) => console.log("I've been clicked!")
+  
+//   button.addEventListener('click', clickEvent);
 
 
 
